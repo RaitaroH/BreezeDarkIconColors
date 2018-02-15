@@ -7,7 +7,11 @@ git clone https://github.com/RaitaroH/BreezeDark-Icon-Colors.git
 ```
 
 # Use
-Simply run ChangeColors.sh --command. You can use the -h|--help to see what you can do. You can change the folder icons to pruple, green, red etc.
+Simply run ChangeColors.sh --command. You can use the -h|--help to see what you can do. You can change the folder icons to purple, green, red etc.
+
+After the script did it's thing, you have to change the icon set from System Settings.
+
+Also you can try out my color scheme changer [here](https://github.com/RaitaroH/BreezeDarkColorSchemes) to have a more fitting qt theme.
 
 # Screenshots
 
