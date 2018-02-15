@@ -2,7 +2,10 @@
 
 create() {
 name=$1
+echo "The script will need your password to continue. Creating files in /usr/share/icons/"
 
+echo "Copying files..."
+echo
 sudo mkdir /usr/share/icons/breeze-dark-$name/
 sudo cp -R /usr/share/icons/breeze-dark/places /usr/share/icons/breeze-dark-$name/
 sudo cp /usr/share/icons/breeze-dark/index.theme /usr/share/icons/breeze-dark-$name/
@@ -12,12 +15,19 @@ blue1=$2
 blue2=$3
 blue3=$4
 
-#	Name
+	# Name
+	echo "Making the custom theme inherit the rest of the icons from breeze-dark"
+	echo
+	
 	cd /usr/share/icons/breeze-dark-$name/
  	sudo sed -i -- "s/=Breeze\ Dark/=Breeze\ Dark\ $name/g" index.theme
  	sudo sed -i -- "s/Inherits=/Inherits=breeze-dark,/g" index.theme
+
+
+	# Svg change
+	echo "Doing svg magic..."
+	echo
 	
-# 	Svg change
 	cd /usr/share/icons/breeze-dark-$name/places/64/
 	sudo sed -i -- "s/3daee9/$blue1/g" *.svg
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
@@ -29,12 +39,11 @@ blue3=$4
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
 	sudo sed -i -- "s/147eb8/$blue3/g" *.svg
 	sudo sed -i -- "s/1272a5/$blue3/g" *.svg
-	
-	exit
 
 return
 }
 
+# Adding options
 params="$(getopt -o bcgmopryh  -l black,blue,brown,cyan,green,grey,magenta,orange,purple,red,yellow,help --name "$0" -- "$@")"
 
 eval set -- "$params"
@@ -98,9 +107,9 @@ do
 	;;
 
 	-h|--help)
-		echo "This is a script that will copy the places icons from the breeze icon set and change their colors to something else. Here are a few exammples:"
+		echo "This is a script that will copy the places icons from the breeze icon set and change their colors to something else."
 		echo
-		echo "You have the following options: black (b), blue, brown, cyan (-c), green (-g), grey, magenta (-m), orange (-o), purple (-p),red (-r), yellow (-y), help"
+		echo "You have the following options: --black (b), --blue, --brown, --cyan (-c), green (-g), --grey, --magenta (-m), --orange (-o), --purple (-p), --red (-r), --yellow (-y), --help (-h)"
 		exit 1
 	;;
 
