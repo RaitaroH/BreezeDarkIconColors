@@ -46,13 +46,27 @@ return
 }
 
 # Adding options
-params="$(getopt -o bcgmopryh  -l black,blue,brown,cyan,green,grey,magenta,orange,purple,red,yellow,help --name "$0" -- "$@")"
+params="$(getopt -o abcgmopryh  -l all,black,blue,brown,cyan,green,grey,magenta,orange,purple,red,yellow,help --name "$0" -- "$@")"
 
 eval set -- "$params"
 
 while true
 do
 	case "$1" in
+	-a|--all)
+		create Black 3e3e3e 494949 2d2d2d
+		create Blue 4183d7 5b94df 245da8
+		create Brown 8b6039 996e45 664629
+		create Cyan 21bbd7 3dc8e1 167b8d
+		create Green 3bad7e 45cc87 0f9b71
+		create Grey a7afb4 bdc3c7 6e6e6e
+		create Magenta b5006a c70073 87004f
+		create Orange f89406 faa938 a3660d
+		create Purple 8e44ad 9d52bd 6c3384
+		create Red eb0a42 f62459 9d072c
+		create Yellow f2cb40 f5d76e a97606
+		exit 1
+	;;
 	-b|--black)
 		create Black 3e3e3e 494949 2d2d2d
 		exit 1
@@ -111,7 +125,7 @@ do
 	-h|--help)
 		echo "This is a script that will copy the places icons from the breeze icon set and change their colors to something else."
 		echo
-		echo "You have the following options: --black (b), --blue, --brown, --cyan (-c), green (-g), --grey, --magenta (-m), --orange (-o), --purple (-p), --red (-r), --yellow (-y), --help (-h)"
+		echo "You have the following options: --all (a), --black (b), --blue, --brown, --cyan (-c), green (-g), --grey, --magenta (-m), --orange (-o), --purple (-p), --red (-r), --yellow (-y), --help (-h)"
 		exit 1
 	;;
 
