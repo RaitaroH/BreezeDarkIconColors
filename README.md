@@ -3,7 +3,8 @@ A script that changes the colors of the folder icons from breeze dark. It uses t
 
 # Installation
 ```
-git clone https://github.com/RaitaroH/BreezeDark-Icon-Colors.git
+git clone https://github.com/RaitaroH/BreezeDarkIconColors.git
+chmod +x BreezeDarkIconColors/ChangeColors.sh
 ```
 
 # Use
