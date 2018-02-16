@@ -33,12 +33,14 @@ blue3=$4
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
 	sudo sed -i -- "s/147eb8/$blue3/g" *.svg
 	sudo sed -i -- "s/1272a5/$blue3/g" *.svg
+	sudo ln -fs stock_folder.svg inode-directory.svg
 	
 	cd /usr/share/icons/breeze-dark-$name/places/32/
 	sudo sed -i -- "s/3daee9/$blue1/g" *.svg
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
 	sudo sed -i -- "s/147eb8/$blue3/g" *.svg
 	sudo sed -i -- "s/1272a5/$blue3/g" *.svg
+	sudo ln -fs stock_folder.svg inode-directory.svg
 
 return
 }
