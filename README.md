@@ -1,6 +1,8 @@
 # BreezeDark-Icon-Colors
 A script that changes the colors of the folder icons from breeze dark. It uses the colors take from other folder icons in the theme.
 
+I should also mention that these are available in the store [here](https://store.kde.org/p/1214699/). Also you can find a similar (but missing the gradient) icon set [here](https://store.kde.org/p/1160457) which sinks with your color scheme, but I find them not too look as good.
+
 # Installation
 ```
 git clone https://github.com/RaitaroH/BreezeDarkIconColors.git
@@ -21,3 +23,4 @@ A few examples:
 ![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/GreenIcons.png)
 ![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/PurpleIcons.png)
 ![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/RedIcons.png)
+
