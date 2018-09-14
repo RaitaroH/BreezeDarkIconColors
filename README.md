@@ -5,7 +5,7 @@ I should also mention that these are available in the store [here](https://store
 
 # Installation
 ```
-git clone https://github.com/RaitaroH/BreezeDarkIconColors.git
+git clone https://gitlab.com/RaitaroH/BreezeDarkIconColors.git
 chmod +x BreezeDarkIconColors/ChangeColors.sh
 ```
 
@@ -14,13 +14,13 @@ Simply run ChangeColors.sh --command. You can use the -h|--help to see what you 
 
 After the script did it's thing, you have to change the icon set from System Settings.
 
-Also you can try out my color scheme changer [here](https://github.com/RaitaroH/BreezeDarkColorSchemes) to have a more fitting qt theme.
+Also you can try out my color scheme changer [here](https://gitlab.com/RaitaroH/BreezeDarkColorSchemes) to have a more fitting qt theme.
 
 # Screenshots
 
 A few examples:
-![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/BlackIcons.png)
-![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/GreenIcons.png)
-![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/PurpleIcons.png)
-![alt-tag](https://raw.githubusercontent.com/RaitaroH/BreezeDark-Icon-Colors/master/Images/RedIcons.png)
+![alt-tag](./Images/BlackIcons.png)
+![alt-tag](./Images/GreenIcons.png)
+![alt-tag](./Images/PurpleIcons.png)
+![alt-tag](./Images/RedIcons.png)
 
