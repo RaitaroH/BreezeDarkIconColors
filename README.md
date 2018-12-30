@@ -19,6 +19,7 @@ Also you can try out my color scheme changer [here](https://gitlab.com/RaitaroH/
 # Screenshots
 
 A few examples:
+
 ![alt-tag](./Images/BlackIcons.png)
 ![alt-tag](./Images/GreenIcons.png)
 ![alt-tag](./Images/PurpleIcons.png)
