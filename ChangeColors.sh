@@ -18,7 +18,7 @@ blue3=$4
 	# Name
 	echo "Making the custom theme inherit the rest of the icons from breeze-dark"
 	echo
-	
+
 	cd /usr/share/icons/breeze-dark-$name/
  	sudo sed -i -- "s/=Breeze\ Dark/=Breeze\ Dark\ $name/g" index.theme
  	sudo sed -i -- "s/Inherits=/Inherits=breeze-dark,/g" index.theme
@@ -27,14 +27,14 @@ blue3=$4
 	# Svg change
 	echo "Doing svg magic..."
 	echo
-	
+
 	cd /usr/share/icons/breeze-dark-$name/places/64/
 	sudo sed -i -- "s/3daee9/$blue1/g" *.svg
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
 	sudo sed -i -- "s/147eb8/$blue3/g" *.svg
 	sudo sed -i -- "s/1272a5/$blue3/g" *.svg
 	sudo ln -fs stock_folder.svg inode-directory.svg
-	
+
 	cd /usr/share/icons/breeze-dark-$name/places/32/
 	sudo sed -i -- "s/3daee9/$blue1/g" *.svg
 	sudo sed -i -- "s/6cc1ef/$blue2/g" *.svg
@@ -42,11 +42,17 @@ blue3=$4
 	sudo sed -i -- "s/1272a5/$blue3/g" *.svg
 	sudo ln -fs stock_folder.svg inode-directory.svg
 
+# Making some symlinks
+sudo cp -r /usr/share/icons/breeze-dark/mimetypes /usr/share/icons/breeze-dark-$name/mimetypes
+sudo cp -r /usr/share/icons/breeze-dark/actions /usr/share/icons/breeze-dark-$name/actions
+sudo cp /usr/share/icons/breeze-dark-$name/places/32/inode-directory.svg /usr/share/icons/breeze-dark-$name/mimetypes/32/inode-directory.svg
+sudo cp /usr/share/icons/breeze-dark-$name/places/64/inode-directory.svg /usr/share/icons/breeze-dark-$name/mimetypes/64/inode-directory.svg
+
 return
 }
 
 # Adding options
-params="$(getopt -o abcgmopryh  -l all,black,blue,brown,cyan,green,grey,magenta,orange,purple,red,yellow,help --name "$0" -- "$@")"
+params="$(getopt -o abcgmopryh  -l all,black,blue,brown,cyan,green,grey,magenta,orange,gruvbox,purple,red,yellow,help --name "$0" -- "$@")"
 
 eval set -- "$params"
 
@@ -104,6 +110,11 @@ do
 
 	-o|--orange)
 		create Orange f89406 faa938 a3660d
+		exit 1
+	;;
+
+	--gruvbox)
+		create Gruvbox fe8019 fdbc4b 713F16
 		exit 1
 	;;
 
